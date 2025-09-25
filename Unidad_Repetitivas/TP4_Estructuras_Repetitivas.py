@@ -164,7 +164,7 @@ nPostivos = 0
 
 
 
-while (i < 4):
+while (i < 101):
     num = int(input("Ingrese un numero: "))
     
     if num % 2 == 0:
@@ -184,5 +184,28 @@ print(f'Cantidad de numeros pares: {nPares}')
 print(f'Cantidad de numeros impares: {nImpares}')
 print(f'Cantidad de numeros negativos: {nNegativos}')
 print(f'Cantidad de numeros positivos: {nPostivos}')
+
+"""
+
+"""
+
+9) Elabora un programa que permita al usuario ingresar 100 números enteros y luego calcule la 
+media de esos valores. (Nota: puedes probar el programa con una cantidad menor, pero debe 
+poder procesar 100 números cambiando solo un valor). 
+
+"""
+"""
+
+i = 0
+acum = 0
+
+
+
+while (i < 101):
+    num = int(input("Ingrese un numero: "))
+    acum += num
+    i += 1
+
+print(f'La media entre {acum} / {i} es: {acum/i}')
 
 """
