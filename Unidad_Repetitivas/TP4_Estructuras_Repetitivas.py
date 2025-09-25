@@ -105,4 +105,19 @@ print(f'Intentos para adivinar {i}')
 
 """
 
+6) Desarrolla un programa que imprima en pantalla todos los números pares comprendidos 
+entre 0 y 100, en orden decreciente. 
+
+"""
+"""
+
+
+i = 100
+
+for i in range (101,0,-1):
+    if i%2 == 0:
+        print(i)
+    else: 
+        continue
+
 """
