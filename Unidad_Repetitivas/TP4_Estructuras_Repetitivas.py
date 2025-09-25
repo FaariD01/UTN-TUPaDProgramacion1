@@ -121,3 +121,26 @@ for i in range (101,0,-1):
         continue
 
 """
+
+"""
+
+7) Crea un programa que calcule la suma de todos los números comprendidos entre 0 y un 
+número entero positivo indicado por el usuario.
+
+"""
+
+"""
+
+i = 0 
+acum = 0 
+
+num = int(input("Ingrese un numero entero positivo: "))
+
+for i in range ( 0, num+1):
+    acum += i
+    
+    
+print(f'La suma de los numeros es {acum}')
+
+"""
+
