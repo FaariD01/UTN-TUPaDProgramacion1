@@ -144,3 +144,45 @@ print(f'La suma de los numeros es {acum}')
 
 """
 
+"""
+
+8) Escribe un programa que permita al usuario ingresar 100 números enteros. Luego, el 
+programa debe indicar cuántos de estos números son pares, cuántos son impares, cuántos son 
+negativos y cuántos son positivos. (Nota: para probar el programa puedes usar una cantidad 
+menor, pero debe estar preparado para procesar 100 números con un solo cambio). 
+
+"""
+
+"""
+
+i = 0
+
+nPares = 0
+nImpares = 0
+nNegativos = 0
+nPostivos = 0
+
+
+
+while (i < 4):
+    num = int(input("Ingrese un numero: "))
+    
+    if num % 2 == 0:
+        nPares += 1
+    else:
+        nImpares += 1
+        
+    if num < 0:
+        nNegativos += 1
+    else: 
+        nPostivos += 1
+
+    i += 1
+    
+
+print(f'Cantidad de numeros pares: {nPares}')
+print(f'Cantidad de numeros impares: {nImpares}')
+print(f'Cantidad de numeros negativos: {nNegativos}')
+print(f'Cantidad de numeros positivos: {nPostivos}')
+
+"""
