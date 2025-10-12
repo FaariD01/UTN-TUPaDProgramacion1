@@ -175,3 +175,23 @@ celsius = float(input("Ingrese la temperatura en grados celcius:  "))
 print(f"{celsius} grados celsius equivalen a {celsius_a_fahrenheit(celsius)} fahrenheit")
 
 """
+
+"""
+
+10.Crear una función llamada calcular_promedio(a, b, c) que reciba
+tres números como parámetros y devuelva el promedio de ellos.
+Solicitar los números al usuario y mostrar el resultado usando esta
+función.
+
+
+def calcular_promedio(a, b, c):
+    return (a + b + c) / 3
+
+num1 = float(input("Ingrese el primer número: "))
+num2 = float(input("Ingrese el segundo número: "))
+num3 = float(input("Ingrese el tercer número: "))
+
+print(f"El promedio es: {calcular_promedio(num1,num2,num3)}")
+
+
+"""
