@@ -47,3 +47,25 @@ precios.
 lista_frutas = list(precios_frutas.keys())
 
 print(lista_frutas)
+
+"""
+
+4) Escribí un programa que permita almacenar y consultar números telefónicos. 
+• Permití al usuario cargar 5 contactos con su nombre como clave y número como valor. 
+• Luego, pedí un nombre y mostrale el número asociado, si existe.
+
+"""
+
+agenda = {}
+
+for i in range(2):
+    nombre = input(f'Ingresa el nombre del contacto {i+1}: ')
+    numero = int(input(f"Ingresa el numero de {nombre}: "))
+    agenda[nombre] = numero
+    
+nombre_buscar = input("Ingresa el nombre a consultar: ")
+
+if nombre_buscar in agenda:
+    print(f"El numero de {nombre_buscar} es: {agenda[nombre_buscar]}")
+else:
+    print(f"No se encontro un contacto con el nombre {nombre_buscar}")
