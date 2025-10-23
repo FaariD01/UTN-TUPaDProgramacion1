@@ -55,7 +55,7 @@ print(lista_frutas)
 • Luego, pedí un nombre y mostrale el número asociado, si existe.
 
 """
-
+"""
 agenda = {}
 
 for i in range(2):
@@ -69,3 +69,33 @@ if nombre_buscar in agenda:
     print(f"El numero de {nombre_buscar} es: {agenda[nombre_buscar]}")
 else:
     print(f"No se encontro un contacto con el nombre {nombre_buscar}")
+"""  
+    
+"""
+
+5) Solicita al usuario una frase e imprime: 
+• Las palabras únicas (usando un set). 
+• Un diccionario con la cantidad de veces que aparece cada palabra.
+
+
+"""
+
+frase = input("Ingresa una frase: ")
+
+palabras = frase.split()
+
+palabras_unicas = set(palabras)
+
+print("Palabras unicas:", palabras_unicas)
+
+conteo_de_palabras = {}
+
+for palabra in palabras:
+    if palabra in conteo_de_palabras:
+        conteo_de_palabras[palabra] += 1
+    else:
+     conteo_de_palabras[palabra] = 1
+
+
+
+print("Cantidad de veces que aparece cada palabra:", conteo_de_palabras )
