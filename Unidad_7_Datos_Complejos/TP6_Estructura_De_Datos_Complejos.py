@@ -80,6 +80,7 @@ else:
 
 """
 
+"""
 frase = input("Ingresa una frase: ")
 
 palabras = frase.split()
@@ -99,3 +100,20 @@ for palabra in palabras:
 
 
 print("Cantidad de veces que aparece cada palabra:", conteo_de_palabras )
+
+
+"""
+
+alumnos = {}
+
+for i in range(3):
+    nombre_alumno = input("Ingres el nombre del alumno: ")
+    nota_alumno = []
+    for j in range(3):
+        nota = int(input(f"Ingrese la nota {j+1} de {nombre_alumno}: "))
+        nota_alumno.append(nota)
+    alumnos[nombre_alumno]= tuple(nota_alumno)
+
+print("\nAlumnos y sus notas:")
+for nombre_alumno, nota_alumno in alumnos.items():
+    print(f"{nombre_alumno}: {nota_alumno}")
