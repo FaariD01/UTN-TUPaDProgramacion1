@@ -145,3 +145,57 @@ print("Aprobaron solo uno de los dos:", solo_uno)
 
 al_menos_uno = parcial1 | parcial2 
 print("Aprobaron al menos un parcial:", al_menos_uno)
+
+
+"""
+
+8) Armá un diccionario donde las claves sean nombres de productos y los valores su stock. 
+Permití al usuario: 
+• Consultar el stock de un producto ingresado. 
+• Agregar unidades al stock si el producto ya existe. 
+• Agregar un nuevo producto si no existe. 
+
+
+"""
+
+
+stock_productos = {
+    "manzanas": 10,
+    "bananas": 20,
+    "naranjas": 15
+}
+
+
+print("Stock actual:", stock_productos)
+
+
+producto = input("Ingrese el nombre del producto: ").lower()
+
+
+if producto in stock_productos:
+    print(f"El stock actual de {producto} es: {stock_productos[producto]} unidades.")
+    
+   
+    agregar = input("¿Desea agregar unidades? (s/n): ").lower()
+    if agregar == "s":
+        cantidad = int(input("¿Cuántas unidades desea agregar?: "))
+        stock_productos[producto] += cantidad
+        print(f"Nuevo stock de {producto}: {stock_productos[producto]} unidades.")
+else:
+    print(f"El producto '{producto}' no existe en el inventario.")
+    
+    
+    agregar_nuevo = input("¿Desea agregarlo al inventario? (s/n): ").lower()
+    if agregar_nuevo == "s":
+        cantidad = int(input("Ingrese la cantidad inicial de stock: "))
+        stock_productos[producto] = cantidad
+        print(f"Producto '{producto}' agregado con {cantidad} unidades.")
+
+
+print("\nStock actualizado:", stock_productos)
+
+
+"""
+
+
+"""
