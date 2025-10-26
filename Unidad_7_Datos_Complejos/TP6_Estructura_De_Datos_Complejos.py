@@ -225,3 +225,32 @@ if clave in agenda:
     print(f"\nEn {dia} a las {hora} hay: {agenda[clave]}")
 else:
     print(f"\nNo hay ninguna actividad agendada el {dia} a las {hora}.")
+
+
+"""
+10) Dado un diccionario que mapea nombres de países con sus capitales, construí un nuevo 
+diccionario donde: 
+• Las capitales sean las claves. 
+• Los países sean los valores.
+
+
+"""
+
+
+paises = {
+    "Argentina": "Buenos Aires",
+    "Chile": "Santiago",
+    "Uruguay": "Montevideo",
+    "Paraguay": "Asunción",
+    "Brasil": "Brasilia"
+}
+
+
+capitales = {capital: pais for pais, capital in paises.items()}
+
+
+print("Diccionario original (país → capital):")
+print(paises)
+
+print("\nDiccionario invertido (capital → país):")
+print(capitales)
