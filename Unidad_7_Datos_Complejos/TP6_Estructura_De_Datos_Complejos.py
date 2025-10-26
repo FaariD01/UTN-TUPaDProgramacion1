@@ -196,6 +196,32 @@ print("\nStock actualizado:", stock_productos)
 
 
 """
-
+9) Creá una agenda donde las claves sean tuplas de (día, hora) y los valores sean eventos. 
+Ejemplo:
+Permití consultar qué actividad hay en cierto día y hora.
 
 """
+
+
+agenda = {
+    ("lunes", "10:00"): "Reunión de equipo",
+    ("martes", "14:00"): "Clase de programación",
+    ("miércoles", "09:00"): "Gimnasio",
+    ("viernes", "18:00"): "Salida con amigos"
+}
+
+
+print("Agenda actual:")
+for clave, evento in agenda.items():
+    print(f"{clave[0].capitalize()} a las {clave[1]} → {evento}")
+
+
+dia = input("\nIngrese el día: ").lower()
+hora = input("Ingrese la hora (formato HH:MM): ")
+
+clave = (dia, hora)
+
+if clave in agenda:
+    print(f"\nEn {dia} a las {hora} hay: {agenda[clave]}")
+else:
+    print(f"\nNo hay ninguna actividad agendada el {dia} a las {hora}.")
