@@ -103,6 +103,7 @@ print("Cantidad de veces que aparece cada palabra:", conteo_de_palabras )
 
 
 """
+"""
 
 alumnos = {}
 
@@ -117,3 +118,30 @@ for i in range(3):
 print("\nAlumnos y sus notas:")
 for nombre_alumno, nota_alumno in alumnos.items():
     print(f"{nombre_alumno}: {nota_alumno}")
+"""
+
+
+"""
+7) Dado dos sets de números, representando dos listas de estudiantes que aprobaron Parcial 1 
+y Parcial 2: 
+• Mostrá los que aprobaron ambos parciales. 
+• Mostrá los que aprobaron solo uno de los dos. 
+• Mostrá la lista total de estudiantes que aprobaron al menos un parcial (sin repetir).
+
+"""
+
+
+parcial1 = {"Ana", "Luis", "María", "Jorge", "Carla"}
+parcial2 = {"María", "Jorge", "Sofía", "Pedro"}
+
+
+ambos = parcial1 & parcial2   
+print("Aprobaron ambos parciales:", ambos)
+
+
+solo_uno = parcial1 ^ parcial2  
+print("Aprobaron solo uno de los dos:", solo_uno)
+
+
+al_menos_uno = parcial1 | parcial2 
+print("Aprobaron al menos un parcial:", al_menos_uno)
