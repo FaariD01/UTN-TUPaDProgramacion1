@@ -107,12 +107,42 @@ print(f'Listado de impares {impares}')
 • Crear una nueva lista sin elementos repetidos.
 • Mostrar el resultado.
 
-datos = [1,3,5,3,7,1,9,5,3]
 
-"""
+
 
 datos = [1,3,5,3,7,1,9,5,3]
 
 datos_sin_repetidos = list(set(datos))
 
 print(datos_sin_repetidos)
+
+"""
+
+"""
+
+5) Crear una lista con los nombres de 8 estudiantes presentes en clase.
+• Preguntar al usuario si quiere agregar un nuevo estudiante o eliminar uno existente.
+• Mostrar la lista final actualizada.
+
+"""
+
+estudiantes_presentes = ["Farid", "Juan", "Mariana", "Yamil", "Valentina", "Agustin", "Rodrigo", "Daniela"]
+
+print(f'Estudiantes presentes {estudiantes_presentes}')
+
+##• Preguntar al usuario si quiere agregar un nuevo estudiante o eliminar uno existente.
+
+eliminar_o_agregar = input("Desea agregar o eliminar algun estudiante? Indique A o E: ")
+
+if eliminar_o_agregar == "E":
+    estudiante = input("A quien desea eliminar? ")
+    if estudiante in estudiantes_presentes:
+        estudiantes_presentes.remove(estudiante)
+    else:
+        print("El estudiante no esta en la lista")
+else:
+    nuevoEstudiante = input("Ingrese el nombre del nuevo estudiante: ")
+    estudiantes_presentes.append(nuevoEstudiante)
+
+
+print(f'Lista actualizada: ', estudiantes_presentes)
