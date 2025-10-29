@@ -81,7 +81,6 @@ print(f'Lista actualizada: ', lista_productos)
 • Crear una lista con los pares y otra con los impares.
 • Mostrar cuántos números tiene cada lista.
 
-"""
 import random
 
 lista_numeros_random = [random.randint(1,10) for _ in range(15)]
@@ -101,3 +100,19 @@ for numero in lista_numeros_random:
 
 print(f'Listado de pares {pares}')
 print(f'Listado de impares {impares}')
+
+"""
+"""
+4) Dada una lista con valores repetidos:
+• Crear una nueva lista sin elementos repetidos.
+• Mostrar el resultado.
+
+datos = [1,3,5,3,7,1,9,5,3]
+
+"""
+
+datos = [1,3,5,3,7,1,9,5,3]
+
+datos_sin_repetidos = list(set(datos))
+
+print(datos_sin_repetidos)
