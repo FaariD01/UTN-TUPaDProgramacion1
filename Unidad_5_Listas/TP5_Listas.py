@@ -50,7 +50,6 @@ print(f"La nota minima es {min}")
 • Mostrar la lista ordenada alfabéticamente. Investigue el uso del método sorted().
 • Preguntar al usuario qué producto desea eliminar y actualizar la lista.
 
-"""
 
 lista_productos = []
 i = 0
@@ -73,3 +72,32 @@ else:
     print(f"El producto {borrar} no se encuentra en la lista")
 
 print(f'Lista actualizada: ', lista_productos)
+
+"""
+
+"""
+
+3) Generar una lista con 15 números enteros al azar entre 1 y 100.
+• Crear una lista con los pares y otra con los impares.
+• Mostrar cuántos números tiene cada lista.
+
+"""
+import random
+
+lista_numeros_random = [random.randint(1,10) for _ in range(15)]
+
+
+##Crear una lista con los pares y otra con los impares.
+
+pares = []
+impares = []
+for numero in lista_numeros_random:
+    if numero % 2 == 0:
+       pares.append(numero) 
+    else:
+        impares.append(numero)
+
+##Mostrar cuántos números tiene cada lista.
+
+print(f'Listado de pares {pares}')
+print(f'Listado de impares {impares}')
