@@ -124,7 +124,6 @@ print(datos_sin_repetidos)
 • Preguntar al usuario si quiere agregar un nuevo estudiante o eliminar uno existente.
 • Mostrar la lista final actualizada.
 
-"""
 
 estudiantes_presentes = ["Farid", "Juan", "Mariana", "Yamil", "Valentina", "Agustin", "Rodrigo", "Daniela"]
 
@@ -144,5 +143,22 @@ else:
     nuevoEstudiante = input("Ingrese el nombre del nuevo estudiante: ")
     estudiantes_presentes.append(nuevoEstudiante)
 
-
+##Mostrar la lista final actualizada.
 print(f'Lista actualizada: ', estudiantes_presentes)
+
+"""
+
+"""
+
+6) Dada una lista con 7 números, rotar todos los elementos una posición hacia la derecha (el
+último pasa a ser el primero).
+
+"""
+
+listaNumerica = [ 1,2,3,4,5,6,7,8 ]
+
+print(f'Lista original: ', listaNumerica)
+
+listaNumerica = listaNumerica[-1:] + listaNumerica[:-1]
+
+print(f'Lista modificada: ', listaNumerica)
