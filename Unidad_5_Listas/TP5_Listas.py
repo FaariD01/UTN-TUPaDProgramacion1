@@ -254,7 +254,6 @@ for j in range(num_materias):
 • Permitir que dos jugadores ingresen posiciones (fila, columna) para colocar "X" o "O".
 • Mostrar el tablero después de cada jugada.
 
-"""
 
 # Tablero 3x3 inicializado con "-"
 tablero = [["-" for _ in range(3)] for _ in range(3)]
@@ -284,3 +283,50 @@ for turno in range(4):  # se puede ampliar a 9 para toda la partida
     jugador_actual = "X" if turno % 2 == 0 else "O"
     jugar(tablero, jugador_actual)
     mostrar_tablero(tablero)
+
+"""
+
+"""
+
+10) Una tienda registra las ventas de 4 productos durante 7 días, en una matriz de 4x7.
+• Mostrar el total vendido por cada producto.
+• Mostrar el día con mayores ventas totales.
+• Indicar cuál fue el producto más vendido en la semana.
+
+"""
+
+ventas = [
+    [10, 12, 15, 11, 14, 13, 16],  # Producto 1
+    [5, 8, 7, 6, 9, 10, 7],        # Producto 2
+    [20, 18, 19, 21, 22, 20, 23],  # Producto 3
+    [7, 9, 8, 6, 5, 10, 12]        # Producto 4
+]
+
+productos = ["Producto 1", "Producto 2", "Producto 3", "Producto 4"]
+dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+
+##Mostrar el total vendido por cada producto.
+
+for i, producto in enumerate(ventas):
+    total = sum(producto)
+    print(f"Total vendido del {productos[i]}: {total}")
+    
+##Mostrar el día con mayores ventas totales.
+ventas_por_dia = [0]*7  # inicializa lista de 7 días
+
+for j in range(7):  # recorrer columnas
+    for i in range(4):  # recorrer productos
+        ventas_por_dia[j] += ventas[i][j]
+
+##Indicar cuál fue el producto más vendido en la semana.
+max_ventas = max(ventas_por_dia)
+indice_dia = ventas_por_dia.index(max_ventas)
+print(f"El día con mayores ventas fue {dias[indice_dia]} con {max_ventas} ventas")
+
+
+total_productos = [sum(fila) for fila in ventas]
+max_total = max(total_productos)
+indice_producto = total_productos.index(max_total)
+print(f"El producto más vendido en la semana fue {productos[indice_producto]} con {max_total} unidades")
+
+
