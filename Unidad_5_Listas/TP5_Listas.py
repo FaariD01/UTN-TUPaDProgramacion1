@@ -153,7 +153,6 @@ print(f'Lista actualizada: ', estudiantes_presentes)
 6) Dada una lista con 7 números, rotar todos los elementos una posición hacia la derecha (el
 último pasa a ser el primero).
 
-"""
 
 listaNumerica = [ 1,2,3,4,5,6,7,8 ]
 
@@ -162,3 +161,53 @@ print(f'Lista original: ', listaNumerica)
 listaNumerica = listaNumerica[-1:] + listaNumerica[:-1]
 
 print(f'Lista modificada: ', listaNumerica)
+
+"""
+
+"""
+
+7) Crear una matriz (lista anidada) de 7x2 con las temperaturas mínimas y máximas de una
+semana.
+• Calcular el promedio de las mínimas y el de las máximas.
+• Mostrar en qué día se registró la mayor amplitud térmica.
+
+"""
+
+temperaturas_semana = [
+    [15, 25],  # Lunes
+    [14, 24],  # Martes
+    [13, 23],  # Miércoles
+    [16, 26],  # Jueves
+    [12, 22],  # Viernes
+    [11, 21],  # Sábado
+    [10, 20]   # Domingo
+]
+
+##Calcular el promedio de las mínimas y el de las máximas.
+suma_min = 0
+suma_max = 0
+
+for temp in temperaturas_semana:
+    suma_min += temp[0]
+    suma_max += temp[1]
+    
+promedio_min = suma_min / len(temperaturas_semana)
+promedio_max = suma_max / len(temperaturas_semana)
+
+print(f"Promedio de temperaturas mínimas: {promedio_min:.2f}°C")
+print(f"Promedio de temperaturas máximas: {promedio_max:.2f}°C")
+
+##Mostrar en qué día se registró la mayor amplitud térmica.
+
+dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+
+mayor_amplitud = 0
+dia_mayor_amplitud = ""
+
+for i, temp in enumerate(temperaturas_semana):
+    amplitud = temp[1] - temp[0]  # máxima - mínima
+    if amplitud > mayor_amplitud:
+        mayor_amplitud = amplitud
+        dia_mayor_amplitud = dias[i]
+
+print(f"El día con mayor amplitud térmica fue {dia_mayor_amplitud} con {mayor_amplitud}°C")
