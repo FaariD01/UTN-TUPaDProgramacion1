@@ -171,7 +171,6 @@ semana.
 • Calcular el promedio de las mínimas y el de las máximas.
 • Mostrar en qué día se registró la mayor amplitud térmica.
 
-"""
 
 temperaturas_semana = [
     [15, 25],  # Lunes
@@ -211,3 +210,38 @@ for i, temp in enumerate(temperaturas_semana):
         dia_mayor_amplitud = dias[i]
 
 print(f"El día con mayor amplitud térmica fue {dia_mayor_amplitud} con {mayor_amplitud}°C")
+
+"""
+
+"""
+
+8) Crear una matriz con las notas de 5 estudiantes en 3 materias.
+• Mostrar el promedio de cada estudiante.
+• Mostrar el promedio de cada materia.
+
+"""
+
+notas = [
+    [8, 7, 9],  # Estudiante 1
+    [6, 9, 7],  # Estudiante 2
+    [7, 8, 6],  # Estudiante 3
+    [9, 5, 8],  # Estudiante 4
+    [10, 7, 9]  # Estudiante 5
+]
+
+
+##Mostrar el promedio de cada estudiante.
+for i, estudiante in enumerate(notas):
+    promedio = sum(estudiante) / len(estudiante)
+    print(f"Promedio del estudiante {i+1}: {promedio:.2f}")
+
+num_materias = len(notas[0])
+num_estudiantes = len(notas)
+
+##Mostrar el promedio de cada materia.
+for j in range(num_materias):
+    suma_materia = 0
+    for i in range(num_estudiantes):
+        suma_materia += notas[i][j]
+    promedio_materia = suma_materia / num_estudiantes
+    print(f"Promedio de la materia {j+1}: {promedio_materia:.2f}")
