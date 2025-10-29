@@ -43,3 +43,33 @@ print(f"La nota maxima es {max}")
 print(f"La nota minima es {min}")
 
 """
+
+"""
+
+2) Pedir al usuario que cargue 5 productos en una lista.
+• Mostrar la lista ordenada alfabéticamente. Investigue el uso del método sorted().
+• Preguntar al usuario qué producto desea eliminar y actualizar la lista.
+
+"""
+
+lista_productos = []
+i = 0
+for i in range(0,5):
+    producto = input("Ingrese un producto:  ")
+    lista_productos.append(producto)
+    
+##Mostrar la lista ordenada alfabéticamente. Investigue el uso del método sorted()
+
+print(sorted(lista_productos))
+
+##Preguntar al usuario qué producto desea eliminar y actualizar la lista.
+
+borrar = input("Que producto desea eliminar? Ingrese el nombre...")
+
+if borrar in lista_productos:
+    lista_productos.remove(borrar)
+    print(f"el producto {borrar} fue eliminado")
+else:
+    print(f"El producto {borrar} no se encuentra en la lista")
+
+print(f'Lista actualizada: ', lista_productos)
