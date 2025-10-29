@@ -219,7 +219,6 @@ print(f"El día con mayor amplitud térmica fue {dia_mayor_amplitud} con {mayor_
 • Mostrar el promedio de cada estudiante.
 • Mostrar el promedio de cada materia.
 
-"""
 
 notas = [
     [8, 7, 9],  # Estudiante 1
@@ -245,3 +244,43 @@ for j in range(num_materias):
         suma_materia += notas[i][j]
     promedio_materia = suma_materia / num_estudiantes
     print(f"Promedio de la materia {j+1}: {promedio_materia:.2f}")
+
+"""
+
+"""
+
+9) Representar un tablero de Ta-Te-Ti como una lista de listas (3x3).
+• Inicializarlo con guiones "-" representando casillas vacías.
+• Permitir que dos jugadores ingresen posiciones (fila, columna) para colocar "X" o "O".
+• Mostrar el tablero después de cada jugada.
+
+"""
+
+# Tablero 3x3 inicializado con "-"
+tablero = [["-" for _ in range(3)] for _ in range(3)]
+
+def mostrar_tablero(tablero):
+    for fila in tablero:
+        print(" ".join(fila))
+    print()  # línea en blanco para separar
+
+def jugar(tablero, jugador):
+    while True:
+        try:
+            fila = int(input(f"Jugador {jugador}, ingrese la fila (0-2): "))
+            columna = int(input(f"Jugador {jugador}, ingrese la columna (0-2): "))
+            if tablero[fila][columna] == "-":
+                tablero[fila][columna] = jugador
+                break
+            else:
+                print("La casilla ya está ocupada, elija otra.")
+        except (ValueError, IndexError):
+            print("Entrada inválida. Debe ser un número entre 0 y 2.")
+
+mostrar_tablero(tablero)
+
+# Jugadores alternando X y O
+for turno in range(4):  # se puede ampliar a 9 para toda la partida
+    jugador_actual = "X" if turno % 2 == 0 else "O"
+    jugar(tablero, jugador_actual)
+    mostrar_tablero(tablero)
