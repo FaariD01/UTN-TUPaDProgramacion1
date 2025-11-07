@@ -99,3 +99,19 @@ for p in productos:
 producto. Recorrer la lista de productos y, si lo encuentra, mostrar todos sus datos. Si 
 no existe, mostrar un mensaje de error. 
 """
+
+print("\n--- Buscar producto por nombre ---")
+buscado = input("Ingrese el nombre del producto a buscar: ").strip().lower()
+
+encontrado = False
+for p in productos:
+    if p["nombre"].lower() == buscado:
+        print(f"\nProducto encontrado:")
+        print(f"Nombre: {p['nombre']}")
+        print(f"Precio: ${p['precio']}")
+        print(f"Cantidad: {p['cantidad']}")
+        encontrado = True
+        break
+
+if not encontrado:
+    print("\nProducto no encontrado en la lista.")
