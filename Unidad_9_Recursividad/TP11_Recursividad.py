@@ -34,8 +34,20 @@ for i in range(1, num + 1):
 
 
 """
-
 2) Crea una función recursiva que calcule el valor de la serie de Fibonacci en la posición 
 indicada. Posteriormente, muestra la serie completa hasta la posición que el usuario 
 especifique. 
 """
+def fibonacci(n):
+    if n <= 1:             # Casos base
+        return n
+    else:                  # Caso recursivo
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+# Programa principal
+pos = int(input("Ingrese la posición hasta donde mostrar la serie de Fibonacci: "))
+
+print("Serie de Fibonacci:")
+for i in range(pos):
+    print(fibonacci(i), end=" ")
