@@ -115,3 +115,16 @@ for p in productos:
 
 if not encontrado:
     print("\nProducto no encontrado en la lista.")
+    
+"""
+6. Guardar los productos actualizados: Después de haber leído, buscado o agregado 
+productos, sobrescribir el archivo productos.txt escribiendo nuevamente todos los 
+productos actualizados desde la lista. 
+"""
+
+with open("Unidad_8_Manejo_de_Archivos/productos.txt", "w") as archivo:
+    for p in productos:
+        linea = f"{p['nombre']},{p['precio']},{p['cantidad']}\n"
+        archivo.write(linea)
+        
+print("\nArchivo productos.txt actualizado correctamente.")
