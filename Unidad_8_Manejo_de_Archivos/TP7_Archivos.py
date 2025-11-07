@@ -34,3 +34,28 @@ with open("Unidad_8_Manejo_de_Archivos/productos.txt", "r") as archivo:
         nombre, precio, cantidad = linea.split(",")
             
         print(f"Producto: {nombre} | Precio: ${precio} | Cantidad: {cantidad}")
+
+"""
+3. Agregar productos desde teclado: Modificar el programa para que luego de mostrar 
+los productos, le pida al usuario que ingrese un nuevo producto (nombre, precio, 
+cantidad) y lo agregue al archivo sin borrar el contenido existente.
+"""
+
+
+with open("Unidad_8_Manejo_de_Archivos/productos.txt", "r") as archivo:
+    print("Listado de productos:\n")
+
+    for linea in archivo:
+        linea = linea.strip()
+        nombre, precio, cantidad = linea.split(",")
+        print(f"Producto: {nombre} | Precio: ${precio} | Cantidad: {cantidad}")
+
+print("\n--- Agregar nuevo producto ---")
+nombre_nuevo = input("Nombre del producto: ")
+precio_nuevo = input("Precio: ")
+cantidad_nueva = input("Cantidad: ")
+
+with open("Unidad_8_Manejo_de_Archivos/productos.txt", "a") as archivo:
+    archivo.write(f"\n{nombre_nuevo},{precio_nuevo},{cantidad_nueva}")
+
+print("\nProducto agregado correctamente al archivo.")
